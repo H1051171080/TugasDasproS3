@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class MakananKhas{
+	private String Nama;
+	private String Rasa;
+	private String BahanBaku;
+	private int Harga;
+
+public MakananKhas(String Nama,String Rasa,String BahanBaku,int Harga){
+	this.Nama = Nama;
+	this.Rasa = Rasa;
+	this.BahanBaku = BahanBaku;
+	this.Harga = Harga;
+}
+public void info(){
+	System.out.println("Nama = "+this.Nama);
+	System.out.println("Rasa = "+this.Rasa);
+	System.out.println("BahanBaku = "+this.BahanBaku);
+	System.out.println("Harga = "+this.Harga);
+}
+public static void main(String args[]){
+Scanner masuk = new Scanner(System.in);
+
+System.out.print("Masukkan Nama: ");
+	String Nama = masuk.nextLine();
+System.out.print("Masukkan Rasa: ");
+	String Rasa = masuk.nextLine();
+System.out.print("Masukkan Bahan Baku: ");
+	String BahanBaku = masuk.nextLine();
+System.out.print("Masukkan Harga: ");
+	int Harga = masuk.nextInt();
+System.out.println();
+System.out.println("==========MAKANAN KHAS==========");
+MakananKhas oop = new MakananKhas(Nama,Rasa,BahanBaku,Harga);
+oop.info();
+}
+}
